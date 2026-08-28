@@ -1,0 +1,386 @@
+/* 通用列表页：页面壳 / 搜索 / 表格（对齐首页 list 表格风格） */
+
+.nco-settings-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: calc(100vh - 4rem);
+  margin: 0 !important;
+  padding: 1.5rem !important;
+  border-radius: 0 !important;
+  background: #f0f2f5 !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+
+.nco-settings-container .new-style-menu-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #212121;
+  line-height: 1.4;
+}
+
+.nco-settings-container .nco-settings-container-content {
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
+  margin: 0.75rem 0 0;
+  padding: 1.5rem 1.5rem 1.25rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  overflow: hidden;
+}
+
+.ems-list-search {
+  margin-bottom: 0.5rem;
+}
+
+.ems-list-search .el-form-item {
+  margin-right: 16px;
+  margin-bottom: 12px;
+}
+
+.ems-list-search .el-form-item__label {
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 400 !important;
+  padding-right: 8px;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.ems-list-search .el-form-item__content {
+  line-height: 32px;
+}
+
+.ems-list-search .el-input__inner,
+.ems-list-search .el-button {
+  border-radius: 6px;
+}
+
+.ems-list-search .el-input__inner::placeholder,
+.ems-list-search .el-input__inner::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.ems-list-search__control {
+  width: 12rem;
+  max-width: 100%;
+}
+
+/* 时间范围：占两个搜索项 = 2×control(11rem) + 中间 label(90px) + form-item 间距(16px) */
+.ems-list-search__daterange {
+  width: calc(11rem * 2 + 90px + 16px);
+  max-width: 100%;
+}
+
+.ems-list-search .el-button--primary {
+  background-color: #0a59f7;
+  border-color: #0a59f7;
+}
+
+.ems-list-search .el-button--primary:hover,
+.ems-list-search .el-button--primary:focus {
+  background-color: #0747c7;
+  border-color: #0747c7;
+}
+
+.ems-list-toolbar {
+  margin-bottom: 0.75rem;
+}
+
+.ems-list-toolbar .el-button--primary.is-plain {
+  color: #0a59f7;
+  background: #fff;
+  border-color: #0a59f7;
+}
+
+.ems-list-toolbar .el-button--primary.is-plain:hover,
+.ems-list-toolbar .el-button--primary.is-plain:focus {
+  color: #fff;
+  background: #0a59f7;
+  border-color: #0a59f7;
+}
+
+.table-shell {
+  min-width: 0;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+}
+
+.table-shell__wrap {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #e7e8e9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ems-list-table {
+  width: 100%;
+  border: none !important;
+  border-radius: 0 !important;
+  overflow: hidden;
+}
+
+.ems-list-table::before {
+  display: none;
+}
+
+.ems-list-table .el-table__empty-block {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  width: 100% !important;
+  max-width: 100%;
+  height: auto !important;
+  min-height: 160px;
+  box-sizing: border-box;
+}
+
+.ems-list-table .el-table__empty-text {
+  line-height: normal;
+  width: 100%;
+}
+
+.ems-list-table__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 16px;
+}
+
+.ems-list-table__empty-icon {
+  width: 96px;
+  height: auto;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+
+.ems-list-table__empty-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgb(119, 119, 119);
+}
+
+.ems-list-table .el-table__header-wrapper th,
+.ems-list-table .el-table__fixed-header-wrapper th {
+  height: 44px !important;
+  padding: 0;
+  background-color: #f8f8f8 !important;
+  color: rgb(25, 25, 25) !important;
+  font-weight: 600;
+  font-size: 14px !important;
+  border-bottom: 1px solid #e5e6eb !important;
+}
+
+.ems-list-table .el-table__header-wrapper .cell,
+.ems-list-table .el-table__fixed-header-wrapper .cell {
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.ems-list-table .el-table__header-wrapper th.is-center .cell,
+.ems-list-table .el-table__fixed-header-wrapper th.is-center .cell {
+  justify-content: center;
+}
+
+.ems-list-table .caret-wrapper {
+  width: 16px;
+  height: 26px;
+  margin-left: 8px;
+}
+
+.ems-list-table .sort-caret {
+  left: 2px;
+  border-width: 6px;
+}
+
+.ems-list-table .sort-caret.ascending {
+  top: 0;
+  border-bottom-color: #c0c4cc;
+}
+
+.ems-list-table .sort-caret.descending {
+  bottom: 0;
+  border-top-color: #c0c4cc;
+}
+
+.ems-list-table .ascending .sort-caret.ascending {
+  border-bottom-color: #0a59f7 !important;
+}
+
+.ems-list-table .descending .sort-caret.descending {
+  border-top-color: #0a59f7 !important;
+}
+
+.ems-list-table .el-table__body-wrapper td,
+.ems-list-table .el-table__fixed-body-wrapper td {
+  height: 56px;
+  min-height: 56px;
+  padding: 0;
+  border-bottom: 1px solid #e5e6eb !important;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+}
+
+.ems-list-table .el-table__body-wrapper .cell,
+.ems-list-table .el-table__fixed-body-wrapper .cell {
+  line-height: 22px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.ems-list-table .el-table__body tr:hover > td,
+.ems-list-table .el-table__body tr.hover-row > td {
+  background-color: #f3f3f4 !important;
+}
+
+.ems-list-table .el-table__fixed::before,
+.ems-list-table .el-table__fixed-right::before {
+  background-color: #e5e6eb;
+}
+
+.ems-list-table .el-table__body tr:last-child td {
+  border-bottom: none !important;
+}
+
+.ems-list-table .ems-list-table__ops .cell,
+.station-table .ems-list-table__ops .cell {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+/* 操作列：仅图标，颜色 rgba(0,0,0,0.85)；图标间距 margin-right 16px，最后一个无间距
+   文字用 el-tooltip + ems-list-tooltip 悬停展示（Tooltip 不产生包裹节点，间距写在按钮上）
+   station-table：首页列表等未挂 ems-list-table 时，仅复用操作列样式，避免覆盖自有表头/列设置 */
+.ems-list-table .ems-list-table__ops .ems-list-table__ops-btn.el-button--text,
+.ems-list-table .ems-list-table__ops .el-button--text,
+.ems-list-table .station-table__ops .el-button--text,
+.station-table .ems-list-table__ops .ems-list-table__ops-btn.el-button--text,
+.station-table .ems-list-table__ops .el-button--text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 30px;
+  padding: 0;
+  margin: 0 16px 0 0;
+  color: rgba(0, 0, 0, 0.85) !important;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.ems-list-table .ems-list-table__ops .el-button + .el-button,
+.ems-list-table .station-table__ops .el-button + .el-button,
+.station-table .ems-list-table__ops .el-button + .el-button {
+  margin-left: 0;
+}
+
+.ems-list-table .ems-list-table__ops .ems-list-table__ops-btn.el-button--text:last-child,
+.ems-list-table .ems-list-table__ops .el-button--text:last-child,
+.ems-list-table .station-table__ops .el-button--text:last-child,
+.station-table .ems-list-table__ops .ems-list-table__ops-btn.el-button--text:last-child,
+.station-table .ems-list-table__ops .el-button--text:last-child {
+  margin-right: 0;
+}
+
+.ems-list-table .ems-list-table__ops .ems-list-table__ops-btn.el-button--text:hover,
+.ems-list-table .ems-list-table__ops .ems-list-table__ops-btn.el-button--text:focus,
+.ems-list-table .ems-list-table__ops .el-button--text:hover,
+.ems-list-table .ems-list-table__ops .el-button--text:focus,
+.ems-list-table .station-table__ops .el-button--text:hover,
+.ems-list-table .station-table__ops .el-button--text:focus,
+.station-table .ems-list-table__ops .ems-list-table__ops-btn.el-button--text:hover,
+.station-table .ems-list-table__ops .ems-list-table__ops-btn.el-button--text:focus,
+.station-table .ems-list-table__ops .el-button--text:hover,
+.station-table .ems-list-table__ops .el-button--text:focus {
+  color: #0a59f7 !important;
+}
+
+.ems-list-table .ems-list-table__ops .el-button--text [class*="el-icon-"],
+.station-table .ems-list-table__ops .el-button--text [class*="el-icon-"] {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1;
+  color: inherit;
+}
+
+/* 列表轻量气泡：操作文案等悬停提示 */
+.ems-list-tooltip,
+.station-kpi-tooltip {
+  padding: 6px 8px !important;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  line-height: 1.4;
+  background: #fff !important;
+  border: none !important;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ems-list-tooltip .popper__arrow,
+.station-kpi-tooltip .popper__arrow {
+  border-top-color: #fff !important;
+  border-bottom-color: #fff !important;
+}
+
+.ems-list-tooltip .popper__arrow::after,
+.station-kpi-tooltip .popper__arrow::after {
+  border-top-color: #fff !important;
+  border-bottom-color: #fff !important;
+}
+
+.table-footer {
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  padding: 8px 0 0;
+  font-size: 14px;
+  color: #546177;
+}
+
+.table-footer .pagination-container {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0 !important;
+  background: transparent;
+}
+
+.table-footer .el-pagination {
+  position: static;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.table-footer .el-pagination__total {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.table-footer .el-pagination__jump {
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .ems-list-search__control {
+    width: 100%;
+  }
+}

@@ -1,0 +1,26 @@
+/**
+ * 全局 rem 根字号
+ *   ≤1366 → 12px
+ *   ≥1367 → 14px
+ *   ≥1681 → 16px
+ */
+@media screen and (max-width: 1366px) {
+  html,
+  body {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (min-width: 1367px) {
+  html,
+  body {
+    font-size: 14px !important;
+  }
+}
+
+@media screen and (min-width: 1681px) {
+  html,
+  body {
+    font-size: 16px !important;
+  }
+}

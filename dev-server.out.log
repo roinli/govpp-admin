@@ -1,0 +1,15 @@
+
+> witos-platfrom-ui@1.0.0 dev
+> vue-cli-service serve --port 8081
+
+ INFO  Starting development server...
+ DONE  Compiled successfully in 14994ms20:04:20
+
+
+  App running at:
+  - Local:   http://localhost:8081/ 
+  - Network: unavailable
+
+  Note that the development build is not optimized.
+  To create a production build, run npm run build.
+
